@@ -1,0 +1,114 @@
+﻿{% include 'dbasic.html' %}
+
+{% block body %}
+{% load newfilter %}
+{% load static %}
+
+        <div id="page-wrapper">
+            <div id="page-inner">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header text-center">
+                            Dashboard 
+                        </h1>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-green">
+                            <div class="panel-body">
+                                <i class="fa fa fa-users fa-5x"></i>
+                                <h3>{{usr|length}}</h3>
+                            </div>
+                            <div class="panel-footer back-footer-green">
+                               Total Users
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <i class="fa fa-bar-chart-o fa-5x"></i>
+                                <h3>{{totl_product}} </h3>
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                               Total Products
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-red">
+                            <div class="panel-body">
+                                <i class="fa fa-shopping-cart fa-5x"></i>
+                                <h3>{{totl_inst|length}} </h3>
+                            </div>
+                            <div class="panel-footer back-footer-red">
+                               Total Purchase
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-brown">
+                            <div class="panel-body">
+                                <i class="fa fa-qrcode fa-5x"></i>
+                                <h3>{{totl_stud|length}}</h3>
+                            </div>
+                            <div class="panel-footer back-footer-brown">
+                               Total Transactions
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                            New Users
+                            </div> 
+                            {% if usr %}
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table text-center table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">#</th>
+                                                <th class="text-center">Name</th>
+                                                <th class="text-center">Email</th>
+                                                <th class="text-center">Created Date</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for u in usr %}
+                                            {% if forloop.counter < 11 %}  <tr>
+                                                <td>{{forloop.counter}}</td>
+                                                <td>
+                                                {{u.username|title}}</td>
+                                                    <td>{{u.email}}</td>
+                                                    <td>{{u.date_joined|date:'d/m/Y'}}</td>
+                                            </tr> {% endif %}
+                                          {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>{% else %}
+                           
+             <p> &nbsp;&nbsp;0 Available !</p>{% endif %}                        </div>
+
+                    </div>
+                   
+                </div>
+               
+{% endblock body %}

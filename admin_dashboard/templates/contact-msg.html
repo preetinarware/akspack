@@ -1,0 +1,113 @@
+{% include 'dbasic.html' %}
+
+{% block body %}
+{% load static %}
+
+
+{% load newfilter %}
+
+
+
+
+
+<style>
+    td {
+        text-align: center;
+    }
+
+    th {
+        text-align: center;
+    }
+</style>
+
+
+<div id="page-wrapper">
+    <div id="page-inner">
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-header text-center">
+                    Contact
+                </h1>
+            </div>
+        </div>
+        <!-- /. ROW  -->
+
+
+
+
+        <div class="row">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                   Contact Messages
+                </div>
+                
+                <div class="panel-body">
+                    {% if cont %}
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Subject</th>
+                                    <th>Mesage</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for t in cont %}
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{t.name|title}}</td>
+                                    <td>{{t.email}}</td>
+                                    <td>{{t.subject|capfirst}}</td>
+                                    <td>{{t.Msg|capfirst|part}}</td>
+                                    <td>{{t.date|date:'d/m/Y'}}</td>
+
+                                   
+                                </tr>{% endfor %}
+
+
+                            </tbody>
+
+                        </table>
+                        <nav aria-label="Page navigation example text-center">
+                            <ul class="pagination justify-content-end">
+
+                                {% if cont.has_previous %}
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="?page={{cont.previous_page_number}}"
+                                        tabindex="-1">Previous</a>
+                                </li>
+                                {% endif %}
+
+                                {% for i in cont.paginator.page_range %}
+                                {% if cont.number == i %}
+                                <li class="page-item active"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                                {% else %}
+                                <li class="page-item "><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                                {% endif %}{% endfor %}
+
+
+
+
+                                {% if cont.has_next %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{cont.next_page_number}}">Next</a>
+                                </li> {% endif %}
+                            </ul>
+                        </nav>
+                    </div>
+                    {% else %}
+                    <p>0 Available !</p>{% endif %}
+                </div>
+            </div>
+
+
+        </div>
+
+        {% endblock body %}

@@ -1,0 +1,211 @@
+
+
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+
+            <!-- Breadcumb area Start -->
+            <div class="breadcumb-area bg--black ptb--100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="breadcumb">
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link" href="{% url 'home' %}">Home</a></li>
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link current" href="{% url 'about' %}">About Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcumb area End -->
+
+            <!-- Main Content wrapper Start -->
+            <div class="main-content-wrapper">
+                <!-- about area Start  -->
+                <div class="ptb--80 about-area">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="text-block">
+                                    <h2>kainat</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia maxime velit explicabo voluptas modi architecto repellendus vero delectus, facere iusto totam animi? Facilis ducimus aut assumenda reiciendis doloremque explicabo quasi soluta perspiciatis saepe velit ratione suscipit qui quas cumque</p>
+                                    <a href="{% url 'product' %}" class="btn slider-btn mt--20 text-center">Shop Now</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-left text-center mb-md--35">
+                                <figure>
+                                    <img src="{% static 'assets/img/about.jpg' %}" alt="Banner">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- about area End  -->
+                <!-- Team area Start -->
+                <section class="team-area pb--80 text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-title text-center mb-50">
+                                    <h2>Our Team <i class="fa fa-shopping-cart"></i></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt--40">
+                            <div class="col-lg-3 col-sm-6 mb-sm--30 mb-md--30">
+                                <div class="product-grid2">
+                                    <div class="product-image2">
+                                        <a href="#">
+                                            <img class="pic-1" alt="pic1" src="{% static 'assets/img/team/3.jpg' %}">
+                                        </a>
+                                        <ul class="social">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="title"><a href="#">Jane Doe</a></h3>
+                                        <span class="position">CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6 mb-sm--30 mb-md--30">
+                                <div class="product-grid2">
+                                    <div class="product-image2">
+                                        <a href="#">
+                                            <img class="pic-1" alt="pic1" src="{% static 'assets/img/team/2.jpg' %}">
+                                        </a>
+                                        <ul class="social">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="title"><a href="#">John Doe</a></h3>
+                                        <span class="position">CTO</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6 mb-xsm--30">
+                                <div class="product-grid2">
+                                    <div class="product-image2">
+                                        <a href="#">
+                                            <img class="pic-1" alt="pic1" src="{% static 'assets/img/team/1.jpg' %}">
+                                        </a>
+                                        <ul class="social">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="title"><a href="#">Jane Smith</a></h3>
+                                        <span class="position">COO</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="product-grid2">
+                                    <div class="product-image2">
+                                        <a href="#">
+                                            <img class="pic-1" alt="pic1" src="{% static 'assets/img/team/4.jpg' %}">
+                                        </a>
+                                        <ul class="social">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="title"><a href="#">Alex Smith</a></h3>
+                                        <span class="position">COO</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Team area End -->
+            </div>
+            <!-- Main Content wrapper End -->
+
+            <!-- Blog area Start -->
+            <section class="blog-area pb--80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-title text-center mb-50">
+                                <h2>Latest Blog <i class="fa fa-shopping-cart"></i></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="blog-carousel owl-carousel">
+                                <!-- Single Blog Start -->
+                                <div class="single-blog">
+                                    <a href="single-blog-left-sidebar.html" class="kainat-blog-thumb">
+                                        <img src="{% static 'assets/img/blog/1.jpg' %}" alt="Blog Thumb">
+                                    </a>
+                                    <div class="blog-info text-left">
+                                        <h2>Once upon a time</h2>
+                                        <h4>By <span>Admin</span> / 30 August 2019</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam eligendi quam adipisci. Itaque necessitatibus dolorum expedita veritatis quibusdam debitis illum!</p>
+                                        <a href="#">Read More</a>
+                                    </div>
+                                </div>
+                                <!-- Single Blog End -->
+                                
+                                <!-- Single Blog Start -->
+                                <div class="single-blog">
+                                    <a href="single-blog-left-sidebar.html" class="kainat-blog-thumb">
+                                        <img src="{% static 'assets/img/blog/2.jpg' %}" alt="Blog Thumb">
+                                    </a>
+                                    <div class="blog-info text-left">
+                                        <h2>eCommerce fair 2019</h2>
+                                        <h4>By <span>Admin</span> / 19 May 2019</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam eligendi quam adipisci. Itaque necessitatibus dolorum expedita veritatis quibusdam debitis illum!</p>
+                                        <a href="#">Read More</a>
+                                    </div>
+                                </div>
+                                <!-- Single Blog End -->
+                                
+                                <!-- Single Blog Start -->
+                                <div class="single-blog">
+                                    <a href="single-blog-left-sidebar.html" class="kainat-blog-thumb">
+                                        <img src="{% static 'assets/img/blog/3.jpg' %}" alt="Blog Thumb">
+                                    </a>
+                                    <div class="blog-info text-left">
+                                        <h2>Fashion fair 2019</h2>
+                                        <h4>By <span>Admin</span> / 30 july 2019</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam eligendi quam adipisci. Itaque necessitatibus dolorum expedita veritatis quibusdam debitis illum!</p>
+                                        <a href="#">Read More</a>
+                                    </div>
+                                </div>
+                                <!-- Single Blog End -->
+                                
+                                <!-- Single Blog Start -->
+                                <div class="single-blog">
+                                    <a href="single-blog-left-sidebar.html" class="kainat-blog-thumb">
+                                        <img src="{% static 'assets/img/blog/4.jpg' %}" alt="Blog Thumb">
+                                    </a>
+                                    <div class="blog-info text-left">
+                                        <h2>Once upon a time</h2>
+                                        <h4>By <span>Admin</span> / 30 August 2019</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam eligendi quam adipisci. Itaque necessitatibus dolorum expedita veritatis quibusdam debitis illum!</p>
+                                        <a href="#">Read More</a>
+                                    </div>
+                                </div>
+                                <!-- Single Blog End -->
+                                
+                            </div>                    
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- Blog area End -->
+
+         {% endblock body %}

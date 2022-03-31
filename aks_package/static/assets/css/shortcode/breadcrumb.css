@@ -1,0 +1,29 @@
+  .breadcumb-area {
+    background: url(../../img/breadcrumb.jpg) no-repeat scroll center/cover;
+  }
+  
+  .kainat-breadcumb {
+    position: relative;
+    display: inline-block;
+    padding-right: 1.2rem;
+  }
+  
+  .kainat-breadcumb:not(:last-child):after {
+    position: absolute;
+    content: ">";
+    right: 0;
+    top: 0;
+    color: #fff;
+  }
+  
+  .kainat-breadcumb-link {
+    color: #fff;
+    font-size: 2rem;
+  }
+  
+  .kainat-breadcumb-link.current {
+    color: #c0772d;
+  }
+  a.kainat-breadcumb-link:hover {
+    color: #fff;
+  }

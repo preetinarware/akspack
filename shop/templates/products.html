@@ -1,0 +1,746 @@
+
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+
+            <!-- Breadcumb area Start -->
+            <div class="breadcumb-area bg--black ptb--100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="breadcumb">
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link" href="{% url 'home' %}">Home</a></li>
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link current" href="{% url 'product' %}">Shop</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcumb area End -->
+
+            <!-- Main content wrapper Start -->
+            <div class="main-content-wrapper">
+                <div class="shop-area section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 order-lg-1 order-2">
+                                <!-- Sidebar Start -->
+                                <aside class="sidebar shop-sidebar">
+                                    <div class="search-filter">
+
+                                        <!-- Category Search filter Start -->
+                                        <div class="filter-box mb--30">
+                                            <div class="filter-title">
+                                                <h2>Filter by categories</h2>
+                                            </div>
+                                            <ul class="search-filter-list">
+                                                <li class="custom-checkbox">
+                                                    <input type="checkbox" name="bookandboardgame" id="cat" class="kainat-checkbox">
+                                                    <label for="cat" class="kainat-checkbox-label">Dresses</label>
+                                                </li>
+                                                <li class="custom-checkbox">
+                                                    <input type="checkbox" name="babydols" id="1" class="kainat-checkbox">
+                                                    <label for="1" class="kainat-checkbox-label">Accessories</label>
+                                                </li>
+                                                <li class="custom-checkbox">
+                                                    <input type="checkbox" name="babydols" id="2" class="kainat-checkbox">
+                                                    <label for="2" class="kainat-checkbox-label">Handbag</label>
+                                                </li>
+                                                <li class="custom-checkbox">
+                                                    <input type="checkbox" name="babydols" id="3" class="kainat-checkbox">
+                                                    <label for="3" class="kainat-checkbox-label">Watches</label>
+                                                </li>
+                                                <li class="custom-checkbox">
+                                                    <input type="checkbox" name="babydols" id="4" class="kainat-checkbox">
+                                                    <label for="4" class="kainat-checkbox-label">Jewelery</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Category Search filter End -->
+
+                                        <!-- Brand Search filter Start -->
+                                        <div class="filter-box mb--30">
+                                            <div class="filter-title">
+                                                <h2>Filter by brand</h2>
+                                            </div>
+                                            <ul class="search-filter-list">
+                                                <li class="custom-checkbox">
+                                                    <input type="checkbox" name="bookandboardgame" id="bookandboardgame" class="kainat-checkbox">
+                                                    <label for="bookandboardgame" class="kainat-checkbox-label">Nike</label>
+                                                </li>
+                                                <li class="custom-checkbox">
+                                                    <input type="checkbox" name="babydols" id="5" class="kainat-checkbox">
+                                                    <label for="5" class="kainat-checkbox-label">kainat</label>
+                                                </li>
+                                                <li class="custom-checkbox">
+                                                    <input type="checkbox" name="babydols" id="6" class="kainat-checkbox">
+                                                    <label for="6" class="kainat-checkbox-label">Lorem</label>
+                                                </li>
+                                                <li class="custom-checkbox">
+                                                    <input type="checkbox" name="babydols" id="7" class="kainat-checkbox">
+                                                    <label for="7" class="kainat-checkbox-label">Ipsum</label>
+                                                </li>
+                                                <li class="custom-checkbox">
+                                                    <input type="checkbox" name="babydols" id="8" class="kainat-checkbox">
+                                                    <label for="8" class="kainat-checkbox-label">Dolet</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Category Search filter End -->
+
+                                        <!-- Price Search filter Start -->
+                                        <div class="filter-box mb--30">
+                                            <div class="filter-title">
+                                                <h2>Filter by price</h2>
+                                            </div>
+                                            <ul class="search-filter-list">
+                                                <li class="custom-radio">
+                                                    <input type="radio" name="price" id="sixtentoeighteen" class="kainat-radio-input">
+                                                    <label for="sixtentoeighteen" class="kainat-radio-label"><span></span> &dollar;10.00 - &dollar;15.00 (5) </label>
+                                                </li>
+                                                <li class="custom-radio">
+                                                    <input type="radio" name="price" id="twentyfivetothirtytwo" class="kainat-radio-input">
+                                                    <label for="twentyfivetothirtytwo" class="kainat-radio-label"><span></span> &dollar;16.00 - &dollar;25.00 (22)</label>
+                                                </li>
+                                                <li class="custom-radio">
+                                                    <input type="radio" name="price" id="fiftytofiftythree" class="kainat-radio-input">
+                                                    <label for="fiftytofiftythree" class="kainat-radio-label"><span></span> &dollar;26.00 - &dollar;35.00 (53)</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Price Search filter End -->
+
+                                        <!-- Size Search filter Start -->
+                                        <div class="filter-box mb--30">
+                                            <div class="filter-title">
+                                                <h2>Tags</h2>
+                                            </div>
+                                            <ul class="tag-list">
+                                                <li><a href="#">Man</a></li>
+                                                <li><a href="#">Women</a></li>
+                                                <li><a href="#">Accessories</a></li>
+                                                <li><a href="#">Shoes</a></li>
+                                                <li><a href="#">Children</a></li>
+                                                <li><a href="#">Toys</a></li>
+                                                <li><a href="#">Games</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- Size Search filter End -->
+
+                                        <!-- Recent Post Widget Start -->
+                                        <div class="recent-post-widget filter-box">
+                                            <div class="filter-title">
+                                                <h2>Best Product</h2>
+                                            </div>
+                                            <div class="single-recent-post">
+                                                <a href="#" class="single-post-thumb">
+                                                    <img src="{% static 'assets/img/blog/1.jpg' %}" alt="Blog Thumb">
+                                                </a>
+                                                <div class="single-post-content">
+                                                    <a href="#" class="single-post-date">12 Feb, 2020</a>
+                                                    <a href="#" class="single-post-title">Awesome Dress</a>
+                                                </div>
+                                            </div>
+                                            <div class="single-recent-post">
+                                                <a href="#" class="single-post-thumb">
+                                                    <img src="{% static 'assets/img/blog/2.jpg' %}" alt="Blog Thumb">
+                                                </a>
+                                                <div class="single-post-content">
+                                                    <a href="#" class="single-post-date">12 Feb, 2020</a>
+                                                    <a href="#" class="single-post-title">Awesome Dress</a>
+                                                </div>
+                                            </div>
+                                            <div class="single-recent-post">
+                                                <a href="#" class="single-post-thumb">
+                                                    <img src="{% static 'assets/img/blog/3.jpg' %}" alt="Blog Thumb">
+                                                </a>
+                                                <div class="single-post-content">
+                                                    <a href="#" class="single-post-date">12 Feb, 2020</a>
+                                                    <a href="#" class="single-post-title">Awesome Dress</a>
+                                                </div>
+                                            </div>
+                                            <div class="single-recent-post">
+                                                <a href="#" class="single-post-thumb">
+                                                    <img src="{% static 'assets/img/blog/4.jpg' %}" alt="Blog Thumb">
+                                                </a>
+                                                <div class="single-post-content">
+                                                    <a href="#" class="single-post-date">12 Feb, 2020</a>
+                                                    <a href="#" class="single-post-title">Awesome Dress</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Recent Post Widget End -->
+                                    </div>
+                                </aside>
+                                <!-- Sidebar End -->
+                            </div>
+                            <div class="col-lg-9 order-lg-2 order-1">                        
+                                <div class="shop-toolbar d-flex flex-md-row flex-column justify-content-between align-items-md-center">
+                                    <div class="kainat-shop-grid-list">
+                                        <ul class="nav">
+                                            <li>
+                                                <a class="active" data-toggle="tab" href="#grid"><i class="fa fa-th"></i></a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tab" href="#list"><i class="fa fa-list"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="kainat-short">
+                                        <label>Short By:</label>
+                                        <select class="short-select">
+                                            <option value="1">Position</option>
+                                            <option value="2">Name, A to Z</option>
+                                            <option value="3">Name, Z to A</option>
+                                            <option value="4">Price, low to high</option>
+                                            <option value="5">Price, high to low</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Shop Layout Start -->
+                                <div class="main-shop-wrapper">
+                                    <div class="tab-content" id="myTabContent-2">
+                                        <div class="tab-pane show active" id="grid">
+                                            <div class="product-grid-view">
+                                                <div class="row">
+                                                    <div class="col-xl-4 col-md-6">
+                                                        <!-- Product Box Start -->
+                                                        <div class="product-grid mb--30">
+                                                            <div class="product-image">
+                                                                <a href="#">
+                                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/1.jpg' %}">
+                                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/2.jpg' %}">
+                                                                </a>
+                                                                <ul class="social">
+                                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                                </ul>
+                                                                <span class="product-new-label">Sale</span>
+                                                                <span class="product-discount-label">20%</span>
+                                                            </div>
+                                                            <ul class="rating">
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                            </ul>
+                                                            <div class="product-content">
+                                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                                <div class="price">$16.00
+                                                                    <span>$20.00</span>
+                                                                </div>
+                                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Product Box End -->                      
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6">
+                                                        <!-- Product Box Start -->
+                                                        <div class="product-grid mb--30">
+                                                            <div class="product-image">
+                                                                <a href="#">
+                                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/2.jpg' %}">
+                                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/3.jpg' %}">
+                                                                </a>
+                                                                <ul class="social">
+                                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                                </ul>
+                                                                <span class="product-new-label">Sale</span>
+                                                                <span class="product-discount-label">20%</span>
+                                                            </div>
+                                                            <ul class="rating">
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                            </ul>
+                                                            <div class="product-content">
+                                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                                <div class="price">$16.00
+                                                                    <span>$20.00</span>
+                                                                </div>
+                                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Product Box End -->                     
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6">
+                                                        <!-- Product Box Start -->
+                                                        <div class="product-grid mb--30">
+                                                            <div class="product-image">
+                                                                <a href="#">
+                                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/5.jpg' %}">
+                                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/6.jpg' %}">
+                                                                </a>
+                                                                <ul class="social">
+                                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                                </ul>
+                                                                <span class="product-new-label">Sale</span>
+                                                                <span class="product-discount-label">20%</span>
+                                                            </div>
+                                                            <ul class="rating">
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                            </ul>
+                                                            <div class="product-content">
+                                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                                <div class="price">$16.00
+                                                                    <span>$20.00</span>
+                                                                </div>
+                                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Product Box End -->                       
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6">
+                                                        <!-- Product Box Start -->
+                                                        <div class="product-grid mb--30">
+                                                            <div class="product-image">
+                                                                <a href="#">
+                                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/7.jpg' %}">
+                                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/8.jpg' %}">
+                                                                </a>
+                                                                <ul class="social">
+                                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                                </ul>
+                                                                <span class="product-new-label">Sale</span>
+                                                                <span class="product-discount-label">20%</span>
+                                                            </div>
+                                                            <ul class="rating">
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                            </ul>
+                                                            <div class="product-content">
+                                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                                <div class="price">$16.00
+                                                                    <span>$20.00</span>
+                                                                </div>
+                                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Product Box End -->                      
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6">
+                                                        <!-- Product Box Start -->
+                                                        <div class="product-grid mb--30">
+                                                            <div class="product-image">
+                                                                <a href="#">
+                                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/9.jpg' %}">
+                                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/10.jpg' %}">
+                                                                </a>
+                                                                <ul class="social">
+                                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                                </ul>
+                                                                <span class="product-new-label">Sale</span>
+                                                                <span class="product-discount-label">20%</span>
+                                                            </div>
+                                                            <ul class="rating">
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                            </ul>
+                                                            <div class="product-content">
+                                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                                <div class="price">$16.00
+                                                                    <span>$20.00</span>
+                                                                </div>
+                                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Product Box End -->                       
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6">
+                                                        <!-- Product Box Start -->
+                                                        <div class="product-grid mb--30">
+                                                            <div class="product-image">
+                                                                <a href="#">
+                                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/11.jpg' %}">
+                                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/12.jpg' %}">
+                                                                </a>
+                                                                <ul class="social">
+                                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                                </ul>
+                                                                <span class="product-new-label">Sale</span>
+                                                                <span class="product-discount-label">20%</span>
+                                                            </div>
+                                                            <ul class="rating">
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                            </ul>
+                                                            <div class="product-content">
+                                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                                <div class="price">$16.00
+                                                                    <span>$20.00</span>
+                                                                </div>
+                                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Product Box End -->                        
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6">
+                                                        <!-- Product Box Start -->
+                                                        <div class="product-grid mb--30">
+                                                            <div class="product-image">
+                                                                <a href="#">
+                                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/13.jpg' %}">
+                                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/6.jpg' %}">
+                                                                </a>
+                                                                <ul class="social">
+                                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                                </ul>
+                                                                <span class="product-new-label">Sale</span>
+                                                                <span class="product-discount-label">20%</span>
+                                                            </div>
+                                                            <ul class="rating">
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                            </ul>
+                                                            <div class="product-content">
+                                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                                <div class="price">$16.00
+                                                                    <span>$20.00</span>
+                                                                </div>
+                                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Product Box End -->                  
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6">
+                                                        <!-- Product Box Start -->
+                                                        <div class="product-grid mb--30">
+                                                            <div class="product-image">
+                                                                <a href="#">
+                                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/12.jpg' %}">
+                                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/1.jpg' %}">
+                                                                </a>
+                                                                <ul class="social">
+                                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                                </ul>
+                                                                <span class="product-new-label">Sale</span>
+                                                                <span class="product-discount-label">20%</span>
+                                                            </div>
+                                                            <ul class="rating">
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                            </ul>
+                                                            <div class="product-content">
+                                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                                <div class="price">$16.00
+                                                                    <span>$20.00</span>
+                                                                </div>
+                                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Product Box End -->                        
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6">
+                                                        <!-- Product Box Start -->
+                                                        <div class="product-grid mb--30">
+                                                            <div class="product-image">
+                                                                <a href="#">
+                                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/10.jpg' %}">
+                                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/2.jpg' %}">
+                                                                </a>
+                                                                <ul class="social">
+                                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                                </ul>
+                                                                <span class="product-new-label">Sale</span>
+                                                                <span class="product-discount-label">20%</span>
+                                                            </div>
+                                                            <ul class="rating">
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                                <li class="fa fa-star"></li>
+                                                            </ul>
+                                                            <div class="product-content">
+                                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                                <div class="price">$16.00
+                                                                    <span>$20.00</span>
+                                                                </div>
+                                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Product Box End -->                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="list">
+                                            <div class="product-list-view">
+                                                <div class="product-box product-box--list">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="kainat-box-image">
+                                                                <img src="{% static 'assets/img/fashion/product/3.jpg' %}" alt="product image" class="primary_image">
+                                                                <img src="{% static 'assets/img/fashion/product/4.jpg' %}" alt="product image" class="secondary_image">
+                                                                <a href="#" data-toggle="modal" data-target="#productModal" class="quick-view"> <i class="fa fa-eye"></i> </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="kainat-box-desc">
+                                                                <a href="single-product.html" class="kainat-box-title">Blue Shirt</a>
+                                                                <p class="kainat-box-price">
+                                                                    <span class="sale-price">&dollar;15.00</span>
+                                                                    <span class="regular-price">&dollar;23.00</span>
+                                                                </p>
+                                                                <p class="kainat-box-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis distinctio recusandae</p>
+                                                                <a href="cart.html" class="btn add-to-cart btn-style-2"><i class="fa fa-shopping-cart"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-box product-box--list">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="kainat-box-image">
+                                                                <img src="{% static 'assets/img/fashion/product/5.jpg' %}" alt="product image" class="primary_image">
+                                                                <img src="{% static 'assets/img/fashion/product/6.jpg' %}" alt="product image" class="secondary_image">
+                                                                <a href="#" data-toggle="modal" data-target="#productModal" class="quick-view"> <i class="fa fa-eye"></i> </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="kainat-box-desc">
+                                                                <a href="single-product.html" class="kainat-box-title">Blue Shirt</a>
+                                                                <p class="kainat-box-price">
+                                                                    <span class="sale-price">&dollar;15.00</span>
+                                                                    <span class="regular-price">&dollar;23.00</span>
+                                                                </p>
+                                                                <p class="kainat-box-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis distinctio recusandae</p>
+                                                                <a href="cart.html" class="btn add-to-cart btn-style-2"><i class="fa fa-shopping-cart"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-box product-box--list">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="kainat-box-image">
+                                                                <img src="{% static 'assets/img/fashion/product/7.jpg' %}" alt="product image" class="primary_image">
+                                                                <img src="{% static 'assets/img/fashion/product/8.jpg' %}" alt="product image" class="secondary_image">
+                                                                <a href="#" data-toggle="modal" data-target="#productModal" class="quick-view"> <i class="fa fa-eye"></i> </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="kainat-box-desc">
+                                                                <a href="single-product.html" class="kainat-box-title">Blue Shirt</a>
+                                                                <p class="kainat-box-price">
+                                                                    <span class="sale-price">&dollar;15.00</span>
+                                                                    <span class="regular-price">&dollar;23.00</span>
+                                                                </p>
+                                                                <p class="kainat-box-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis distinctio recusandae</p>
+                                                                <a href="cart.html" class="btn add-to-cart btn-style-2"><i class="fa fa-shopping-cart"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-box product-box--list">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="kainat-box-image">
+                                                                <img src="{% static 'assets/img/fashion/product/9.jpg' %}" alt="product image" class="primary_image">
+                                                                <img src="{% static 'assets/img/fashion/product/10.jpg' %}" alt="product image" class="secondary_image">
+                                                                <a href="#" data-toggle="modal" data-target="#productModal" class="quick-view"> <i class="fa fa-eye"></i> </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="kainat-box-desc">
+                                                                <a href="single-product.html" class="kainat-box-title">Blue Shirt</a>
+                                                                <p class="kainat-box-price">
+                                                                    <span class="sale-price">&dollar;15.00</span>
+                                                                    <span class="regular-price">&dollar;23.00</span>
+                                                                </p>
+                                                                <p class="kainat-box-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis distinctio recusandae</p>
+                                                                <a href="cart.html" class="btn add-to-cart btn-style-2"><i class="fa fa-shopping-cart"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-box product-box--list">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="kainat-box-image">
+                                                                <img src="{% static 'assets/img/fashion/product/11.jpg' %}" alt="product image" class="primary_image">
+                                                                <img src="{% static 'assets/img/fashion/product/12.jpg' %}" alt="product image" class="secondary_image">
+                                                                <a href="#" data-toggle="modal" data-target="#productModal" class="quick-view"> <i class="fa fa-eye"></i> </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="kainat-box-desc">
+                                                                <a href="single-product.html" class="kainat-box-title">Blue Shirt</a>
+                                                                <p class="kainat-box-price">
+                                                                    <span class="sale-price">&dollar;15.00</span>
+                                                                    <span class="regular-price">&dollar;23.00</span>
+                                                                </p>
+                                                                <p class="kainat-box-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis distinctio recusandae</p>
+                                                                <a href="cart.html" class="btn add-to-cart btn-style-2"><i class="fa fa-shopping-cart"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-box product-box--list">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="kainat-box-image">
+                                                                <img src="{% static 'assets/img/fashion/product/1.jpg' %}" alt="product image" class="primary_image">
+                                                                <img src="{% static 'assets/img/fashion/product/2.jpg' %}" alt="product image" class="secondary_image">
+                                                                <a href="#" data-toggle="modal" data-target="#productModal" class="quick-view"> <i class="fa fa-eye"></i> </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="kainat-box-desc">
+                                                                <a href="single-product.html" class="kainat-box-title">Blue Shirt</a>
+                                                                <p class="kainat-box-price">
+                                                                    <span class="sale-price">&dollar;15.00</span>
+                                                                    <span class="regular-price">&dollar;23.00</span>
+                                                                </p>
+                                                                <p class="kainat-box-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis distinctio recusandae</p>
+                                                                <a href="cart.html" class="btn add-to-cart btn-style-2"><i class="fa fa-shopping-cart"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-md--30">
+                                        <div class="col-12 text-center">
+                                            <ul class="pagination">
+                                                <li><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>   
+                                </div>
+                                <!-- Shop Layout End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main content wrapper End -->
+
+          
+
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="tab-content product-thumb-large">
+                                <div id="thumb1" class="tab-pane active show fade">
+                                    <img src="{% static 'assets/img/fashion/product/1.jpg' %}" alt="product thumb">
+                                </div>
+                                <div id="thumb2" class="tab-pane fade">
+                                    <img src="{% static 'assets/img/fashion/product/3.jpg' %}" alt="product thumb">
+                                </div>
+                                <div id="thumb3" class="tab-pane fade">
+                                    <img src="{% static 'assets/img/fashion/product/9.jpg' %}" alt="product thumb">
+                                </div>
+                                <div id="thumb4" class="tab-pane fade">
+                                    <img src="{% static 'assets/img/fashion/product/5.jpg' %}" alt="product thumb">
+                                </div>
+                            </div>
+                            <div class="product-thumbnail">
+                                <div class="thumb-menu owl-carousel" id="thumbmenu">
+                                    <div class="thumb-menu-item">
+                                        <a href="#thumb1" data-toggle="tab" class="nav-link active">
+                                            <img src="{% static 'assets/img/fashion/product/1.jpg' %}" alt="product thumb">
+                                        </a>
+                                    </div>
+                                    <div class="thumb-menu-item">
+                                        <a href="#thumb2" data-toggle="tab" class="nav-link">
+                                            <img src="{% static 'assets/img/fashion/product/3.jpg' %}" alt="product thumb">
+                                        </a>
+                                    </div>
+                                    <div class="thumb-menu-item">
+                                        <a href="#thumb3" data-toggle="tab" class="nav-link">
+                                            <img src="{% static 'assets/img/fashion/product/9.jpg' %}" alt="product thumb">
+                                        </a>
+                                    </div>
+                                    <div class="thumb-menu-item">
+                                        <a href="#thumb4" data-toggle="tab" class="nav-link">
+                                            <img src="{% static 'assets/img/fashion/product/5.jpg' %}" alt="product thumb">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <h3 class="product-title">Lorem ipsum solets</h3>
+                            <div class="product-price">
+                                <span class="sale-price">&dollar; 15.00</span>
+                            </div>
+                            <p class="product-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi fuga reiciendis possimus et doloribus, quae explicabo! Dolore tenetur voluptate neque mollitia a hic, enim cumque natus repudiandae sequi? Sunt, ipsam! Temporibus facilis nam aperiam voluptatem ducimus, deserunt adipisci corrupti. Soluta ut asperiores est nihil porro. Obcaecati, velit repellendus.</p>
+                            <p><b>Availability:</b> In stock</p>
+                            <p><b>Condition:</b> New Product</p>
+                            <div class="product-varients">
+                                <div class="kainat-product-size pb--20">
+                                    <span class="kainat-product-label"><b>Size: </b></span>
+                                    <select class="kainat-product-select ml--40">
+                                        <option value="1">S</option>
+                                        <option value="2">M</option>
+                                        <option value="3">L</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="product-action-wrapper pb--20">
+                                <span><b>Quantity: </b></span>
+                                <div class="quantity ml--10">
+                                    <input type="number" class="quantity-input" name="qty" id="qty" value="1">
+                                </div>
+                            </div>
+                            <a href="#" class="btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

@@ -1,0 +1,84 @@
+
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+            <!-- Breadcumb area Start -->
+            <div class="breadcumb-area bg--black ptb--100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="breadcumb">
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link" href="{% url 'home' %}">Home</a></li>
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link current" href="{% url 'cart' %}">Shopping Cart</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcumb area End -->
+
+            <!-- Main content wrapper start -->
+            <div class="main-content-wrapper">
+                <div class="cart-area ptb--60">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <!-- Cart Area Start -->
+                                        <form action="#" class="form form--cart">
+                                            <div class="cart-table table-content table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Images</th>
+                                                            <th>Product</th>
+                                                            <th>Unit Price</th>
+                                                            <th>Quantity</th>
+                                                            <th>Total</th>
+                                                            <th>remove</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="single-product.html"><img src="{% static 'assets/img/fashion/product/1.jpg"' %} alt="product"></a>
+                                                            </td>
+                                                            <td class="cart-product-price"><h3><a href="#">Red Bag</a></h3></td>
+                                                            <td><strong>$16.00</strong></td>
+                                                            <td>
+                                                                <div class="quantity">
+                                                                    <input type="number" class="quantity-input" name="qty" id="qty1" value="1">
+                                                                </div>
+                                                            </td>
+                                                            <td><strong>$16.00</strong></td>
+                                                            <td><a href="#"><i class="fa fa-trash remove"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="single-product.html"><img src="{% static 'assets/img/fashion/product/12.jpg' %}" alt="product"></a>
+                                                            </td>
+                                                            <td class="cart-product-price"><h3><a href="#">Blue shoe</a></h3></td>
+                                                            <td><strong>$16.00</strong></td>
+                                                            <td>
+                                                                <div class="quantity">
+                                                                    <input type="number" class="quantity-input" name="qty" id="qty2" value="1">
+                                                                </div>
+                                                            </td>
+                                                            <td><strong>$16.00</strong></td>
+                                                            <td><a href="#"><i class="fa fa-trash remove"></i></a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </form>
+                                        <!-- Cart Area End -->  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+            <!-- Main content wrapper end -->
+{% endblock body %}

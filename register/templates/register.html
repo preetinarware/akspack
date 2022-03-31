@@ -1,0 +1,66 @@
+
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+            <!-- Breadcumb area Start -->
+            <div class="breadcumb-area bg--black ptb--100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="breadcumb">
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link" href="{% url 'home' %}">Home</a></li>
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link current" href="{% url 'register' %}">Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcumb area End -->
+
+            <!-- Main content wrapper start -->
+            <div class="main-content-wrapper">
+                <div class="page-inner ptb--80">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7 col-md-11">
+                                <div class="form-box">
+                                    <h1>Register</h1>
+                                    <p>Please sign-up using account detail bellow.</p>
+                                   
+                                    <form class="form" method="post" autocomplete="off"  >{% csrf_token %}
+                                {% if error %}
+                                        <h5 style="color: red;">{{error}}</h5>
+                                         
+                                         {% endif %}
+                                        <div class="kainat-form-group row">
+                                            <div class="col-md-12 col-lg-12 col-12">
+                                                <input type="text" name="username"    class="kainat-input-form" placeholder="Username">
+                                            </div>
+                                        </div>
+                                        <div class="kainat-form-group row">
+                                            <div class="col-md-12 col-lg-12 col-12">
+                                                <input type="email" name="email"  id="login_email" class="kainat-input-form" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="kainat-form-group row">
+                                            <div class="col-md-12 col-lg-12 col-12">
+                                                <input type="password" name="password"  id="login_password" class="kainat-input-form" placeholder="Password">
+                                                <button class="password-btn" type="button">Show</button>
+                                            </div>
+                                        </div>
+                                        <div class="kainat-form-group row align-items-center">
+                                            <div class="col-lg-12 col-12">
+                                                <button type="submit" class="btn btn--large btn-style-3">Register</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                   
+                                </div>
+                            </div>
+                        </div>  
+                    </div>    
+                </div>
+            </div>
+            <!-- Main content wrapper end -->
+
+           {% endblock body %}

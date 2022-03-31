@@ -1,0 +1,523 @@
+
+
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+            <!-- Breadcumb area Start -->
+            <div class="breadcumb-area bg--black ptb--100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="breadcumb">
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link" href="{% url 'home' %}">Home</a></li>
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link current" href="{% url 'product-detail' %}">Product-Detail</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcumb area End -->
+
+            <!-- Main Content Wrapper Start -->
+            <div class="main-content-wrapper">
+                <div class="single-products-area ptb--80">
+                    <!-- Single Product Start -->
+                    <section class="single-product pb--40">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <!-- Tab Content Start -->
+                                    <div class="tab-content product-thumb-large" id="myTabContent-3">
+                                        <div class="tab-pane fade show active" id="product-large-one">
+                                            <div class="single-product-img">
+                                                <img src="{% static 'assets/img/fashion/product/1.jpg' %}" alt="product">
+                                                <a href="{% static 'assets/img/fashion/product/1.jpg' %}" class="popup-img-sproduct popup-link">
+                                                    <i class="fa fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="product-large-two">
+                                            <div class="single-product-img">
+                                                <img src="{% static 'assets/img/fashion/product/3.jpg' %}" alt="product">
+                                                <a href="{% static 'assets/img/fashion/product/3.jpg' %}" class="popup-img-sproduct popup-link">
+                                                    <i class="fa fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="product-large-three">
+                                            <div class="single-product-img">
+                                                <img src="{% static 'assets/img/fashion/product/5.jpg' %}" alt="product">
+                                                <a href="{% static 'assets/img/fashion/product/5.jpg' %}" class="popup-img-sproduct popup-link">
+                                                    <i class="fa fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="product-large-four">
+                                            <div class="single-product-img">
+                                                <img src="{% static 'assets/img/fashion/product/7.jpg' %}" alt="product">
+                                                <a href="{% static 'assets/img/fashion/product/7.jpg' %}" class="popup-img-sproduct popup-link">
+                                                    <i class="fa fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Tab Content End -->
+                                    
+                                    <!-- Product Thumbnail Carousel Start -->
+                                    <div class="product-thumbnail">
+                                        <div class="thumb-menu owl-carousel" id="thumbmenu2">
+                                            <div class="thumb-menu-item">
+                                                <a href="#product-large-one" data-toggle="tab" class="nav-link active">
+                                                    <img src="{% static 'assets/img/fashion/product/1.jpg' %}" alt="product thumb">
+                                                </a>
+                                            </div>
+                                            <div class="thumb-menu-item">
+                                                <a href="#product-large-two" data-toggle="tab" class="nav-link">
+                                                    <img src="{% static 'assets/img/fashion/product/3.jpg' %}" alt="product thumb">
+                                                </a>
+                                            </div>
+                                            <div class="thumb-menu-item">
+                                                <a href="#product-large-three" data-toggle="tab" class="nav-link">
+                                                    <img src="{% static 'assets/img/fashion/product/5.jpg' %}" alt="product thumb">
+                                                </a>
+                                            </div>
+                                            <div class="thumb-menu-item">
+                                                <a href="#product-large-four" data-toggle="tab" class="nav-link">
+                                                    <img src="{% static 'assets/img/fashion/product/7.jpg' %}" alt="product thumb">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Thumbnail Carousel End -->
+                                </div>
+                                <div class="col-lg-7">
+                                    <!-- Single Product Content Start -->
+                                    <div class="single-product-content"> 
+                                        <h3 class="product-title">Lorem ipsum solets</h3>
+                                        <div class="product-price">
+                                            <span class="sale-price">&dollar; 15.00</span>
+                                        </div>
+                                        <p><b>Availability:</b> In stock</p>
+                                        <p><b>Condition:</b> New Product</p>
+                                        <p><b>Brand:</b> NBrand</p>
+                                        <p><b>Product Code:</b> 121212</p>
+                                        <div class="product-varients">
+                                            <div class="kainat-product-size pb--20">
+                                                <span class="kainat-product-label"><b>Size: </b></span>
+                                                <select class="kainat-product-select ml--40">
+                                                    <option value="1">S</option>
+                                                    <option value="2">M</option>
+                                                    <option value="3">L</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="product-action-wrapper pb--20">
+                                            <span class="kainat-product-label"><b>Quantity: </b></span>
+                                            <div class="quantity ml--10">
+                                                <input type="number" class="quantity-input" name="qty" value="1">
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-style-4 mb--20">Add to cart</a><hr>
+                                        <p class="product-desc mt--20">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit perspiciatis voluptatibus adipisci rerum cum in cumque ratione, rem quaerat, eum fugit saepe itaque provident velit placeat beatae accusantium repellat vitae tempora? Asperiores rem laborum fuga dolore at tempora aut nisi, cumque modi et eius nam consectetur delectus doloremque libero corporis reprehenderit, eos a eveniet qui ducimus alias inventore ullam cupiditate!</p>
+                                        <div class="social-share">
+                                            <span>Share:</span>
+                                            <ul class="social ml--30">
+                                                <li class="social-item"><a href="facebook.html" class="kainat-social-link"><i class="fa fa-facebook social-icon-modal"></i></a></li>
+                                                <li class="social-item"><a href="twitter.html" class="kainat-social-link"><i class="fa fa-twitter social-icon-modal"></i></a></li>
+                                                <li class="social-item"><a href="plus.google.html" class="kainat-social-link"><i class="fa fa-google-plus social-icon-modal"></i></a></li>
+                                                <li class="social-item"><a href="pinterest.html" class="kainat-social-link"><i class="fa fa-pinterest social-icon-modal"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Single Product Content End -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Single Product End -->
+
+                    <!-- Single Product Tab Start -->
+                    <section class="single-product-tab pb--40">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="single-product-pills nav nav-tab justify-content-center" id="singleProductTab" role="tablist">
+                                        <a class="nav-item nav-link active" id="nav-desc-tab" data-toggle="tab" href="#nav-desc" role="tab" aria-controls="nav-desc" aria-selected="true">Description</a>
+                                        <a class="nav-item nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="true">review Details</a>
+                                    </div>
+                                    <div class="single-kainat-ptab-content tab-content">
+                                        <div class="tab-pane fade show active" id="nav-desc" role="tabpanel" aria-labelledby="nav-desc-tab">
+                                            <p class="product-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt incidunt laudantium nisi, enim eligendi suscipit iste maiores ratione molestiae soluta in illum, praesentium possimus, iure ad. Minima aspernatur dolor dolorum vero officia repudiandae! Corporis esse libero mollitia nobis debitis soluta facilis vero numquam voluptatum, voluptatibus est ducimus labore impedit consequuntur minus aspernatur incidunt. Provident, quos repellendus facilis obcaecati, id, autem minima tempore facere eos molestias velit magnam accusamus? Facere reprehenderit necessitatibus dicta nihil modi eveniet at perspiciatis, ullam dolorem numquam sapiente quis vitae reiciendis, corrupti incidunt aliquid, odit sed iure ex nemo maxime voluptate quia optio voluptas! Recusandae, enim ducimus!</p>
+                                        </div>
+                                        <div class="tab-pane" role="tabpanel" id="nav-review" aria-labelledby="nav-review-tab">
+                                            <div class="review-area">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="review-area">
+                                                            <h2>Write your review</h2>
+                                                            <div class="your-rating">
+                                                                <h5>Quality</h5>
+                                                                <span class="ratings">
+                                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                                    <a href="#"><i class="fa fa-star"></i></a>
+                                                                </span>
+                                                            </div>
+                                                            <form class="review-form">
+                                                                <div class="review-kainat-form-group">
+                                                                    <label for="reviewTitle" class="review-form-label">Title <sup>*</sup></label>
+                                                                    <input id="reviewTitle" type="text" name="reveiw-title" class="review-kainat-input-form">
+                                                                </div>
+                                                                <div class="review-kainat-form-group">
+                                                                    <label for="authorName" class="review-form-label">Name <sup>*</sup></label>
+                                                                    <input id="authorName" type="text" class="review-kainat-input-form">
+                                                                </div>
+                                                                <div class="review-kainat-form-group">
+                                                                    <label for="review" class="review-form-label">Your review <sup>*</sup></label>
+                                                                    <textarea id="review" class="review-kainat-input-form textarea-review"></textarea>
+                                                                </div>
+                                                                <div class="review-btn-group">
+                                                                    <button type="submit" class="btn review-form__btn">Submit</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Single Product Tab End -->
+
+                    <!-- Related Product Area Start -->
+                    <section class="related-product">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-center custom-title">
+                                        <h2>Related Products</h2>
+                                    </div>                        
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="related-product-carousel owl-carousel js-related-product">
+                                        <!-- Product Box Start -->
+                                        <div class="product-grid">
+                                            <div class="product-image">
+                                                <a href="#">
+                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/1.jpg' %}">
+                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/2.jpg' %}">
+                                                </a>
+                                                <ul class="social">
+                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                </ul>
+                                                <span class="product-new-label">Sale</span>
+                                                <span class="product-discount-label">20%</span>
+                                            </div>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="product-content">
+                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                <div class="price">$16.00
+                                                    <span>$20.00</span>
+                                                </div>
+                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Box End -->
+                                        <!-- Product Box Start -->
+                                        <div class="product-grid">
+                                            <div class="product-image">
+                                                <a href="#">
+                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/3.jpg' %}">
+                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/4.jpg' %}">
+                                                </a>
+                                                <ul class="social">
+                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                </ul>
+                                                <span class="product-new-label">Sale</span>
+                                                <span class="product-discount-label">20%</span>
+                                            </div>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="product-content">
+                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                <div class="price">$16.00
+                                                    <span>$20.00</span>
+                                                </div>
+                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Box Start -->
+                                        <div class="product-grid">
+                                            <div class="product-image">
+                                                <a href="#">
+                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/5.jpg' %}">
+                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/6.jpg' %}">
+                                                </a>
+                                                <ul class="social">
+                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                </ul>
+                                                <span class="product-new-label">Sale</span>
+                                                <span class="product-discount-label">20%</span>
+                                            </div>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="product-content">
+                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                <div class="price">$16.00
+                                                    <span>$20.00</span>
+                                                </div>
+                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Box End -->
+                                        <!-- Product Box Start -->
+                                        <div class="product-grid">
+                                            <div class="product-image">
+                                                <a href="#">
+                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/2.jpg' %}">
+                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/10.jpg' %}">
+                                                </a>
+                                                <ul class="social">
+                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                </ul>
+                                                <span class="product-new-label">Sale</span>
+                                                <span class="product-discount-label">20%</span>
+                                            </div>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="product-content">
+                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                <div class="price">$16.00
+                                                    <span>$20.00</span>
+                                                </div>
+                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Box End -->
+                                        <!-- Product Box Start -->
+                                        <div class="product-grid">
+                                            <div class="product-image">
+                                                <a href="#">
+                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/7.jpg' %}">
+                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/8.jpg' %}">
+                                                </a>
+                                                <ul class="social">
+                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                </ul>
+                                                <span class="product-new-label">Sale</span>
+                                                <span class="product-discount-label">20%</span>
+                                            </div>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="product-content">
+                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                <div class="price">$16.00
+                                                    <span>$20.00</span>
+                                                </div>
+                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Box End -->
+                                        <!-- Product Box Start -->
+                                        <div class="product-grid">
+                                            <div class="product-image">
+                                                <a href="#">
+                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/9.jpg' %}">
+                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/10.jpg' %}">
+                                                </a>
+                                                <ul class="social">
+                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                </ul>
+                                                <span class="product-new-label">Sale</span>
+                                                <span class="product-discount-label">20%</span>
+                                            </div>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="product-content">
+                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                <div class="price">$16.00
+                                                    <span>$20.00</span>
+                                                </div>
+                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Box End -->
+                                        <!-- Product Box Start -->
+                                        <div class="product-grid">
+                                            <div class="product-image">
+                                                <a href="#">
+                                                    <img class="pic-1" alt="pic1" src="{% static 'assets/img/fashion/product/11.jpg' %}">
+                                                    <img class="pic-2" alt="pic2" src="{% static 'assets/img/fashion/product/12.jpg' %}">
+                                                </a>
+                                                <ul class="social">
+                                                    <li><a href="#" data-toggle="modal" data-target="#productModal" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                                    <li><a href="wishlist.html" data-tip="Add to Wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                    <li><a href="single-product.html" data-tip="Product Details"><i class="fa fa-link"></i></a></li>
+                                                </ul>
+                                                <span class="product-new-label">Sale</span>
+                                                <span class="product-discount-label">20%</span>
+                                            </div>
+                                            <ul class="rating">
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                                <li class="fa fa-star"></li>
+                                            </ul>
+                                            <div class="product-content">
+                                                <h3 class="title"><a href="#">Women's Tops</a></h3>
+                                                <div class="price">$16.00
+                                                    <span>$20.00</span>
+                                                </div>
+                                                <a class="add-to-cart" href="#">+ Add To Cart</a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Box End -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Related Product Area End -->
+                </div>
+            </div>
+            <!-- Main Content Wrapper End -->
+
+           
+         
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="tab-content product-thumb-large">
+                                <div id="thumb1" class="tab-pane active show fade">
+                                    <img src="{% static 'assets/img/fashion/product/1.jpg' %}" alt="product thumb">
+                                </div>
+                                <div id="thumb2" class="tab-pane fade">
+                                    <img src="{% static 'assets/img/fashion/product/3.jpg' %}" alt="product thumb">
+                                </div>
+                                <div id="thumb3" class="tab-pane fade">
+                                    <img src="{% static 'assets/img/fashion/product/9.jpg' %}" alt="product thumb">
+                                </div>
+                                <div id="thumb4" class="tab-pane fade">
+                                    <img src="{% static 'assets/img/fashion/product/5.jpg' %}" alt="product thumb">
+                                </div>
+                            </div>
+                            <div class="product-thumbnail">
+                                <div class="thumb-menu owl-carousel" id="thumbmenu">
+                                    <div class="thumb-menu-item">
+                                        <a href="#thumb1" data-toggle="tab" class="nav-link active">
+                                            <img src="{% static 'assets/img/fashion/product/1.jpg' %}" alt="product thumb">
+                                        </a>
+                                    </div>
+                                    <div class="thumb-menu-item">
+                                        <a href="#thumb2" data-toggle="tab" class="nav-link">
+                                            <img src="{% static 'assets/img/fashion/product/3.jpg' %}" alt="product thumb">
+                                        </a>
+                                    </div>
+                                    <div class="thumb-menu-item">
+                                        <a href="#thumb3" data-toggle="tab" class="nav-link">
+                                            <img src="{% static 'assets/img/fashion/product/9.jpg' %}" alt="product thumb">
+                                        </a>
+                                    </div>
+                                    <div class="thumb-menu-item">
+                                        <a href="#thumb4" data-toggle="tab" class="nav-link">
+                                            <img src="{% static 'assets/img/fashion/product/5.jpg' %}" alt="product thumb">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <h3 class="product-title">Lorem ipsum solets</h3>
+                            <div class="product-price">
+                                <span class="sale-price">&dollar; 15.00</span>
+                            </div>
+                            <p class="product-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci eligendi fuga reiciendis possimus et doloribus, quae explicabo! Dolore tenetur voluptate neque mollitia a hic, enim cumque natus repudiandae sequi? Sunt, ipsam! Temporibus facilis nam aperiam voluptatem ducimus, deserunt adipisci corrupti. Soluta ut asperiores est nihil porro. Obcaecati, velit repellendus.</p>
+                            <p><b>Availability:</b> In stock</p>
+                            <p><b>Condition:</b> New Product</p>
+                            <div class="product-varients">
+                                <div class="kainat-product-size pb--20">
+                                    <span class="kainat-product-label"><b>Size: </b></span>
+                                    <select class="kainat-product-select ml--40">
+                                        <option value="1">S</option>
+                                        <option value="2">M</option>
+                                        <option value="3">L</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="product-action-wrapper pb--20">
+                                <span><b>Quantity: </b></span>
+                                <div class="quantity ml--10">
+                                    <input type="number" class="quantity-input" name="qty" id="qty" value="1">
+                                </div>
+                            </div>
+                            <a href="#" class="btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

@@ -1,0 +1,226 @@
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+    {% load newfilter %}
+    
+        {% with ''|getContact as abouts %}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{abouts.0.title}}</title>
+    <!-- Bootstrap Styles-->
+    <link rel="icon" type="image/x-icon" href="/media/{{abouts.0.favicon}}">
+    <link href="/static/file/assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="/static/file/assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="/static/file/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="/static/file/assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>{% endwith %}
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'ad_dash' %}">Admin</a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Doe</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Today</em>
+                                    </span>
+                                </div>
+                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem Ipsum has been the industry's standard dummy text ever since an kwilnw...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                   
+                </li> -->
+                <!-- /.dropdown -->
+                
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown"  aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="{% url 'ad_profile' %}"><i class="fa fa-user fa-fw"></i>Profile</a>
+                        </li>
+                        <li><a href="{% url 'ad_profile' %}"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="{% url 'ad_logout' %}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" style="background-color: black;"  role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    {% url 'ad_dash' as ad_dash %}
+                    <li>
+                        <a   class="{% if request.path == ad_dash %}active-menu{% endif %}" href="{{ad_dash}}"><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>
+                  
+                    {% url 'ad_product' as ad_product %}
+                    <li>
+                        <a class="{% if request.path == ad_product %}active-menu{% endif %}" href="{{ad_product}}"><i class="fa fa-table"></i> Products</a>
+                    </li>
+
+                   
+                    <li>{% url 'thick_mtrial' as thick_mtrial %} {% url 'prod_size' as prod_size %}{% url 'style_cate' as style_cate %}
+                        {% url 'prod_coupn' as prod_coupn %}{% url 'prod_uses' as prod_uses %}
+                        {% url 'price' as prod_price %}
+                        <a class="{% if request.path == prod_size or request.path == thick_mtrial or request.path == style_cate or request.path == prod_uses or request.path == prod_coupn %}active-menu{% endif %}" href="#">
+                            <i class="fa fa-sitemap"></i> Details<span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                           
+                            <li>
+                                <a class="{% if request.path == prod_size %}active-menu{% endif %}"  href="{{prod_size}}">Product Size</a>
+                            </li> 
+                            <li>
+                                <a  class="{% if request.path == thick_mtrial %}active-menu{% endif %}" href="{{thick_mtrial}}">Product Thickness & Materials</a>
+                            </li> 
+                            <li>
+                                <a class="{% if request.path == style_cate %}active-menu{% endif %}"  href="{{style_cate}}">Product Style & Category</a>
+                            </li> 
+                            <li>
+                                <a  class="{% if request.path == prod_uses %}active-menu{% endif %}" href="{{prod_uses}}">Product Uses</a>
+                            </li> 
+                            <li>
+                                <a class="{% if request.path == prod_coupn %}active-menu{% endif %}"  href="{{prod_coupn}}">Product Coupon</a>
+                            </li>
+                            <li>
+                                <a class="{% if request.path == prod_price %}active-menu{% endif %}"  href="{{prod_price}}">Product Price</a>
+                            </li> 
+                        </ul>
+                    </li>
+                    {% url 'cont' as cont %}
+                    <li>
+                        <a class="{% if request.path == cont %}active-menu{% endif %}" href="{{cont}}"><i class="fa fa-envelope"></i> Contact Meassages </a>
+                    </li>
+                    {% url 'payments' as payments %}
+                    <li>
+                        <a class="{% if request.path == payments %}active-menu{% endif %}" href="{{payments}}"><i class="fa fa-shopping-cart"></i> Payments </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+{% if messages %}
+	
+                          
+                          <div class="panel-body" style="background-color: white;"> 
+                            {% for m in messages %} 
+                            {% if m.tags == 'success' %}
+                              <div class="alert alert-success" style="margin-left: 20%;margin-right: 10px">
+                               &nbsp;&nbsp;   <strong>Success &nbsp; !</strong>&nbsp;&nbsp;{{m}}
+                              </div>
+                              {% endif %} {% if m.tags == 'info' %}
+                              <div class="alert alert-info" style="margin-left: 20%;margin-right: 10px">
+                                &nbsp;&nbsp;  <strong>Heads up &nbsp; !</strong>&nbsp;&nbsp; {{m}}
+                              </div>{% endif %} {% if m.tags == 'warning' %}
+                              <div class="alert alert-warning" style="margin-left: 20%;margin-right: 10px">
+                               &nbsp;&nbsp;   <strong>Warning &nbsp; !</strong>&nbsp;&nbsp;{{m}}
+                              </div>{% endif %} {% if m.tags == 'error' %}
+                              <div class="alert alert-danger" style="margin-left: 20%;margin-right: 10px">
+                             &nbsp;&nbsp;     <strong>Error &nbsp; !</strong>&nbsp;&nbsp; {{m}}
+                              </div>{% endif %}
+                          {% endfor %}</div>
+              
+{% endif %}
+{% block body %}
+{% endblock body %}
+
+
+{% block body1 %}
+{% endblock body1 %}
+  <!-- /. ROW  -->
+  <!-- <footer><p>All right reserved. Template by:
+       <a href="http://webthemez.com">WebThemez</a></p></footer>
+</div> -->
+<!-- /. PAGE INNER  -->
+<!-- </div> -->
+
+<!-- /. PAGE WRAPPER  -->
+</div>
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="/static/file/assets/js/jquery-1.10.2.js"></script>
+<!-- Bootstrap Js -->
+<script src="/static/file/assets/js/bootstrap.min.js"></script>
+<!-- Metis Menu Js -->
+<script src="/static/file/assets/js/jquery.metisMenu.js"></script>
+<!-- Morris Chart Js -->
+<script src="/static/file/assets/js/morris/raphael-2.1.0.min.js"></script>
+<script src="/static/file/assets/js/morris/morris.js"></script>
+<!-- Custom Js -->
+<script src="/static/file/assets/js/custom-scripts.js"></script>
+
+
+</body>
+
+</html>

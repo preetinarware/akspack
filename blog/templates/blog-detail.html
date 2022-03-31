@@ -1,0 +1,202 @@
+
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+            <!-- Breadcumb area Start -->
+            <div class="breadcumb-area bg--black ptb--100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="breadcumb">
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link" href="{% url 'home' %}">Home</a></li>
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link current" href="{% url 'blog-detail' %}">Blog Detail</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcumb area End -->
+
+            <!-- Main content wrapper start -->
+            <div class="main-content-wrapper">
+                <div class="page-inner section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3  order-lg-1 order-2">
+                                <aside class="sidebar blog-sidebar">
+
+                                    <!-- Category Widget Start -->
+                                    <div class="category-widget filter-box mb--40">
+                                        <div class="filter-title">
+                                            <h2>Categories</h2>
+                                        </div>
+                                        <ul class="category-list">
+                                            <li><a href="#">Accessories<span>(6)</span></a></li>
+                                            <li><a href="#">Dresses<span>(7)</span></a></li>
+                                            <li><a href="#">Jwellery<span>(9)</span></a></li>
+                                            <li><a href="#">Watches<span>(9)</span></a></li>
+                                            <li><a href="#">Toys <span>(4)</span></a></li>
+                                            <li><a href="#">Sunglasses <span>(6)</span></a></li>
+                                            <li><a href="#">Games <span>(7)</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Category Widget End -->
+
+                                    <!-- Recent Post Widget Start -->
+                                    <div class="recent-post-widget filter-box">
+                                        <div class="filter-title">
+                                            <h2>Recent Post</h2>
+                                        </div>
+                                        <div class="single-recent-post">
+                                            <a href="#" class="single-post-thumb">
+                                                <img src="{% static 'assets/img/blog/1.jpg' %}" alt="Blog Thumb">
+                                            </a>
+                                            <div class="single-post-content">
+                                                <a href="#" class="single-post-date">12 jan, 2020</a>
+                                                <a href="#" class="single-post-title">World fashion</a>
+                                            </div>
+                                        </div>
+                                        <div class="single-recent-post">
+                                            <a href="#" class="single-post-thumb">
+                                                <img src="{% static 'assets/img/blog/2.jpg' %}" alt="Blog Thumb">
+                                            </a>
+                                            <div class="single-post-content">
+                                                <a href="#" class="single-post-date">12 jan, 2020</a>
+                                                <a href="#" class="single-post-title">World fashion</a>
+                                            </div>
+                                        </div>
+                                        <div class="single-recent-post">
+                                            <a href="#" class="single-post-thumb">
+                                                <img src="{% static 'assets/img/blog/3.jpg' %}" alt="Blog Thumb">
+                                            </a>
+                                            <div class="single-post-content">
+                                                <a href="#" class="single-post-date">12 jan, 2020</a>
+                                                <a href="#" class="single-post-title">World fashion</a>
+                                            </div>
+                                        </div>
+                                        <div class="single-recent-post">
+                                            <a href="#" class="single-post-thumb">
+                                                <img src="{% static 'assets/img/blog/4.jpg' %}" alt="Blog Thumb">
+                                            </a>
+                                            <div class="single-post-content">
+                                                <a href="#" class="single-post-date">12 jan, 2020</a>
+                                                <a href="#" class="single-post-title">World fashion</a>
+                                            </div>
+                                        </div>
+                                        <div class="single-recent-post">
+                                            <a href="#" class="single-post-thumb">
+                                                <img src="{% static 'assets/img/blog/2.jpg' %}" alt="Blog Thumb">
+                                            </a>
+                                            <div class="single-post-content">
+                                                <a href="#" class="single-post-date">12 jan, 2020</a>
+                                                <a href="#" class="single-post-title">World fashion</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Recent Post Widget End -->
+
+                                </aside>
+                            </div>
+                            <div class="col-lg-9  order-lg-2 order-1">
+                                <div class="single-post-wrapper mb-md--40">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="blog-box">
+                                                <article class="blog">
+                                                    <div class="kainat-blog-img">
+                                                        <img src="{% static 'assets/img/blog/details.jpg' %}" alt="blog thumb">
+                                                    </div>
+                                                    <div class="kainat-blog-content">
+                                                        <div class="blog-entry-meta">
+                                                            <h2 class="blog-title">Blog Details Post</h2>
+                                                            <div class="blog-meta">
+                                                                <span class="posted-by"><i class="fa fa-user"></i> Posted by <a href="#">Admin</a></span>
+                                                                <span class="posted-by"><i class="fa fa-calendar"></i> Posted on <a href="#">13 jan 2019</a></span>
+                                                            </div>
+                                                            <div class="blog-content">
+                                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic exercitationem dolorum non consequatur sint quisquam? Eveniet et nisi sed accusantium dolor cumque laudantium sapiente illum, voluptate excepturi aperiam culpa debitis soluta repellendus repellat iure corrupti. Ut blanditiis enim cumque itaque nihil ea ex, laborum fugiat ratione maxime, reiciendis, dolorem nesciunt. Harum nesciunt facilis suscipit reiciendis totam repellat molestias dicta tenetur.</p>
+                                                                <blockquote>
+                                                                    <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur. In venenatis elit ac ultrices convallis. Duis est nisi, tincidunt ac urna sed, cursus blandit lectus. In ullamcorper sit amet ligula ut eleifend. Proin dictum tempor ligula, ac feugiat metus. Sed finibus tortor eu scelerisque scelerisque.</p>
+                                                                </blockquote>
+                                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic exercitationem dolorum non consequatur sint quisquam? Eveniet et nisi sed accusantium dolor cumque laudantium sapiente illum, voluptate excepturi aperiam culpa debitis soluta repellendus repellat iure corrupti. Ut blanditiis enim cumque itaque nihil ea ex, laborum fugiat ratione maxime, reiciendis, dolorem nesciunt. Harum nesciunt facilis suscipit reiciendis totam repellat molestias dicta tenetur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <div class="blog-comments">
+                                                    <h4>All Comments</h4>
+                                                    <ul class="comment-list">
+                                                        <li>
+                                                            <div class="single-comment">
+                                                                <div class="comment-img">
+                                                                    <img src="{% static 'assets/img/comment/1.jpg' %}" alt="comment">
+                                                                </div>
+                                                                <div class="comment-content">
+                                                                    <h5><a href="#">Jane smith</a><br><span>12 August, 2018</span></h5>
+                                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto officiis tempore sapiente cumque nihil, atque natus ad voluptate excepturi libero!</p>
+                                                                    <a href="#" class="reply">Reply</a>
+                                                                </div>
+                                                            </div>
+                                                            <ul class="children">
+                                                                <li>
+                                                                    <div class="single-comment">
+                                                                        <div class="comment-img">
+                                                                            <img src="{% static 'assets/img/comment/2.jpg' %}" alt="comment">
+                                                                        </div>
+                                                                        <div class="comment-content">
+                                                                            <h5><a href="#">Jane smith</a><br><span>12 August, 2018</span></h5>
+                                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto officiis tempore sapiente cumque nihil, atque natus ad voluptate excepturi libero!</p>
+                                                                            <a href="#" class="reply">Reply</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="single-comment">
+                                                                <div class="comment-img">
+                                                                    <img src="{% static 'assets/img/comment/3.jpg' %}" alt="comment">
+                                                                </div>
+                                                                <div class="comment-content">
+                                                                    <h5><a href="#">Jane smith</a><br><span>12 August, 2018</span></h5>
+                                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto officiis tempore sapiente cumque nihil, atque natus ad voluptate excepturi libero!</p>
+                                                                    <a href="#" class="reply">Reply</a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <h4>Leave a reply</h4>
+                                                    <p>Your email address will not be published. Required fields are marked *</p>
+                                                    <form class="form form--comment" action="#">
+                                                        <div class="row">
+                                                            <div class="kainat-form-group col-6">
+                                                                <input type="text" name="name" id="comment_name" class="kainat-input-form" placeholder="Name">
+                                                            </div>
+                                                            <div class="kainat-form-group col-6">
+                                                                <input type="email" name="email" id="comment_email" class="kainat-input-form" placeholder="Email*">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="kainat-form-group col-12">
+                                                                <textarea class="kainat-input-form kainat-input-form--textarea" id="comment_message" placeholder="Message *"></textarea>
+                                                            </div>                                        
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <button type="submit" class="btn slider-btn">Post Comment</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>    
+                </div>
+            </div>
+            <!-- Main content wrapper end -->
+            
+           {% endblock body %}

@@ -1,0 +1,626 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from nahartheme.com/tf/kainat-preview/kainat/index.html by
+ HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10
+Feb 2022 09:42:35 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Shop with Top Categories">
+    <meta name="keywords" content="this is a demo meta keywords">
+    <title>AKS Packaging Company in Gurgaon</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}">
+    <link rel="apple-touch-icon" href="{% static 'assets/img/icon.html' %}">
+
+
+
+    <!-- ************************* CSS ************************* -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+
+    <!-- All Plugins CSS css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+    <!-- modernizr JS
+    ============================================ -->
+    <script src="{% static 'assets/js/modernizr-2.8.3.min.js' %}"></script>
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+
+    <!-- Main Wrapper Start -->
+
+    <div class="wrapper">
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fa fa-close"></i>
+            </div>
+
+            <div class="list-unstyled components">
+                <div class="header-user-item">
+                    <div class="hcart-action">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <div class="hcart-image">
+                        <img src="{% static 'assets/img/fashion/product/1.jpg' %}" alt="product">
+                    </div>
+                    <div class="hcart-content">
+                        <h4><a href="single-product.html">Red bag</a></h4>
+                        <p>1 X &dollar;100</p>
+                    </div>
+                </div>
+                <div class="header-user-item">
+                    <div class="hcart-action">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <div class="hcart-image">
+                        <img src="{% static 'assets/img/fashion/product/3.jpg' %}" alt="product">
+                    </div>
+                    <div class="hcart-content">
+                        <h4><a href="single-product.html">Blue shoes</a> </h4>
+                        <p>1 X &dollar;100</p>
+                    </div>
+                </div>
+                <div class="header-user-item">
+                    <div class="hcart-action">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <div class="hcart-image">
+                        <img src="{% static 'assets/img/fashion/product/5.jpg' %}" alt="product">
+                    </div>
+                    <div class="hcart-content">
+                        <h4><a href="single-product.html">Blue man shirt</a> </h4>
+                        <p>1 X &dollar;100</p>
+                    </div>
+                </div>
+                <ul class="header-user-list">
+                    <li class="header-user-single">
+                        <span class="header-user-single--title">Subtotal</span>
+                        <span class="cart-amount">$100.00</span>
+                    </li>
+                </ul>
+                <div class="header-user-btn">
+                    <a href="cart.html" class="btn btn-checkout btn-style-3">Cart</a>
+                    <a href="checkout.html" class="btn btn-checkout btn-style-3">Checkout</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Sidebar End -->
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <!-- Header area Start -->
+            <header class="header">
+                <div class="header-top d-none d-md-block">
+                    <div class="container">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-6 col-sm-12">
+                                <p>Free shipping on all orders over $500</p>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <!-- Header Top Nav Start -->
+                                <div class="language-currancy d-flex justify-content-md-end justify-content-center">
+                                    <div class="top-hdrop">
+                                        <div class="dropdown kainat-top-dropdown">
+                                            <a class="dropdown-toggle" id="kainat-user" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                My Account<i class="fa fa-caret-down"></i></a>
+                                            <div class="dropdown-menu" aria-labelledby="kainat-user">
+                                                <a class="dropdown-item" href="checkout.html">Checkout</a>
+                                                <a class="dropdown-item" href="wishlist.html">Wishlist</a>
+                                                {% if request.user.is_authenticated %}
+                                                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                                                {% else %}
+                                                
+                                                <a class="dropdown-item" href="{% url 'register' %}">Register</a>
+                                                <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-hdrop">
+                                        <div class="dropdown kainat-top-dropdown">
+                                            <a class="dropdown-toggle" id="kainat-language" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                Language<i class="fa fa-caret-down"></i></a>
+                                            <div class="dropdown-menu" aria-labelledby="kainat-language">
+                                                <a class="dropdown-item" href="#"><img src="{% static 'assets/img/language/1.png' %}"
+                                                        alt="English"> English</a>
+                                                <a class="dropdown-item" href="#"><img src="{% static 'assets/img/language/2.png' %}"
+                                                        alt="French"> French</a>
+                                                <a class="dropdown-item" href="#"><img src="{% static 'assets/img/language/3.png' %}"
+                                                        alt="German"> German</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-hdrop">
+                                        <div class="dropdown kainat-top-dropdown">
+                                            <a class="dropdown-toggle" id="kainat-currency" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                Currency<i class="fa fa-caret-down"></i></a>
+                                            <div class="dropdown-menu" aria-labelledby="kainat-currency">
+                                                <a class="dropdown-item" href="#">&dollar; - Dollar</a>
+                                                <a class="dropdown-item" href="#">&pound; - Pound</a>
+                                                <a class="dropdown-item" href="#">&euro; - Euro</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Header Top Nav End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-middle">
+                    <div class="container">
+                        <div class="row no-gutters">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-left">
+                                <a class="logo-box" href="index.html">
+                                    <img src="{% static 'assets/img/logo.png' %}" alt="logo">
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-6 d-none d-md-block">
+                                <form action="#" class="search-form kainat-search-form">
+                                    <input type="text" name="search" id="search" class="kainat-search-input"
+                                        placeholder="Search Product">
+                                    <button type="submit" class="kainat-search-btn form-btn kainat-form-btn">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                                <div class="header-middle-right justify-content-md-end">
+                                    <!-- Header user Start -->
+                                    <div class="header-user header-area-user">
+                                        <a class="kainat-user-toggle">
+                                            <i class="fa fa-heart-o header-heart-icon"></i>
+                                        </a>
+                                    </div>
+                                    <!-- Header user End -->
+
+                                    <a id="sidebarCollapse">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <sup class="cart-badge">03</sup>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mobile-menu mobile__menu"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-footer fixed-header">
+                    <div class="container">
+                        <div class="row no-gutters">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12 justify-content-md-end">
+                                <div class="header-middle-right justify-content-md-end">
+                                    <nav class="main-navigation">
+                                        <!-- Mainmenu Start -->
+                                        <ul class="mainmenu kainat-main-menu">
+                                            {% url 'home' as homeurl  %}
+                                            <li class="kainat-mainmenu-itm menu-item-has-children">
+                                                <a href="{{homeurl}}" class="kainat-mainmenu-link">Home</a>
+
+                                            </li> 
+                                            <li class="kainat-mainmenu-itm menu-item-has-children">
+                                                <a href="shop.html" class="kainat-mainmenu-link">Categories</a>
+                                                <ul class="megamenu three-column">
+                                                    <li>
+                                                        <a href="#">Fashion</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="shop.html" class="">Cloth</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Shoes</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Sunglass</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Bag</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Beauty</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="shop.html" class="">Lipistic</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Nailpalish</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Eyeliner</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Shampoo</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Jewellery</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="shop.html" class="">Necklace</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Earring</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Nose Pin</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Bracelet</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="d-none d-lg-block">
+                                                        <img class="megamenu-img" src="{% static 'assets/img/fashion/product/1.jpg' %}"
+                                                            alt="">
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+                                            {% url 'product' as producturl  %}
+                                            <li class="kainat-mainmenu-itm menu-item-has-children ">
+                                                <a href="{{producturl}}" class="kainat-mainmenu-link">Product</a>
+                                                <!-- <ul class="sub-menu">
+                                                    <li class="menu-item-has-children">
+                                                        <a href="shop.html">Shop Grid</a>
+                                                        <ul class="sub-menu">
+                                                            <li>
+                                                                <a href="shop.html">Shop Grid Left Sidebar</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop-right-sidebar.html">Shop Grid Right Sidebar</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item-has-children">
+                                                        <a href="shop-list-view.html">Shop List</a>
+                                                        <ul class="sub-menu">
+                                                            <li>
+                                                                <a href="shop-list-view.html">Shop List Left Sidebar</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop-no-sidebar.html" class="mainmenu-sub-link">Shop Without Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="single-product.html" class="mainmenu-sub-link">Single Products</a>
+                                                    </li>
+                                                </ul> -->
+                                            </li>
+                                            <!-- <li class="kainat-mainmenu-itm menu-item-has-children">
+                                                <a href="#" class="kainat-mainmenu-link">Pages</a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="cart.html" class="mainmenu-sub-link">Cart</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="wishlist.html" class="mainmenu-sub-link">Wishlist</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="checkout.html" class="mainmenu-sub-link">Checkout</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="login.html" class="mainmenu-sub-link">Login</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="register.html" class="mainmenu-sub-link">Register</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="about.html" class="mainmenu-sub-link">About Us</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="contact-us.html" class="mainmenu-sub-link">Contact Us</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="404.html" class="mainmenu-sub-link">404 Page</a>
+                                                    </li>
+                                                </ul>
+                                            </li> -->
+                                            {% url 'blog' as blogurl  %}
+                                     <li class="kainat-mainmenu-itm menu-item-has-children">
+                                                <a href="{{blogurl}}" class="kainat-mainmenu-link">Blog</a>
+                                                <!-- <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="blog-left-sidebar.html">Blog With Left Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-right-sidebar.html">Blog With right Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog.html">Blog Without Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="single-blog-left-sidebar.html">Blog Details Left Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="single-blog-right-sidebar.html">Blog Details Right Sidebar</a>
+                                                    </li>
+                                                </ul> -->
+                                            </li> {% url 'about' as abouturl  %}
+                                            <li class="kainat-mainmenu-itm ">
+                                                <a href="{{abouturl}}" class="kainat-mainmenu-link">About Us</a>
+                                            </li>
+                                            
+                                        </ul>
+                                        <!-- Mainmenu End -->
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Header area End -->
+            <style>
+                @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+.alert-info,
+.alert-success,
+.alert-warning,
+.alert-error {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.alert-info {
+  color: #059;
+  background-color: #BEF;
+}
+.alert-success {
+  color: #270;
+  background-color: #DFF2BF;
+}
+.alert-warning{
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.alert-error {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+                </style>
+{% if messages %}
+         
+{% for m in messages %}
+              <div class="alert alert-{% if m.tags == 'warning' %}warning {% elif m.tags == 'error' %}error
+              {% elif m.tags == 'success' %}success{% elif m.tags == 'info' %}info{% endif %} alert-dismissible fade show" role="alert">
+                  {% if m.tags == 'error' %}
+                <i class="fa fa-times-circle"></i>
+                 <strong>Error!</strong> {{m}}
+                {% elif m.tags == 'success' %}
+                <i class="fa fa-check"></i>
+                 <strong>Success!</strong> {{m}}
+                {% elif m.tags == 'warning' %}
+                <i class="fa fa-warning"></i>
+                 <strong>Warning!</strong> {{m}}
+                {% elif m.tags == 'info' %}
+                <i class="fa fa-info-circle"></i>
+                 <strong>info!</strong> {{m}}
+                {% endif %}
+               
+                <button type="button" class="close" style="float:right;"  data-dismiss="alert">
+                X
+                </button>
+              </div>
+{% endfor %}
+
+              {% endif %}
+
+
+
+            {% block body %}
+
+
+
+
+
+            {% endblock body %}
+
+
+
+            <!-- Footer top area Start -->
+            <div class="footer grey-color">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row pt--80 pb--40 footer-widget-row">
+
+                            <!-- Footer Widget Start -->
+                            <div class="col-lg-4 col-md-8 col-sm-8">
+                                <div class="footer-widget">
+                                    <h3 class="widget-title">About Us</h3>
+                                    <div class="f-logo menu-widget">
+                                        <div class="mb--30">
+                                            <a href="{% url 'home' %}"><img src="{% static 'assets/img/logo.png' %}" alt=""></a>
+                                        </div>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;&nbsp;273-274,
+                                                    Basai Enclave, Sector 37,<br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;Gurugram, Haryana 122001
+                                                </a></li>
+                                            <li><a href="#"><i class="fa fa-phone"></i>&nbsp;&nbsp;+91-9654497586,
+                                                    9013011994 </a></li>
+                                            <li><a href="#"><i
+                                                        class="fa fa-envelope"></i>&nbsp;&nbsp;akspackagingsolutions@gmail.com
+                                                </a> </li>
+                                            <li><a href="#"><i class="fa fa-skype"></i>&nbsp;&nbsp; kainat-skype</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Footer Widget End -->
+
+                            <!-- Footer Widget Start -->
+                            <div class="col-lg-2 col-md-4 col-sm-4">
+                                <div class="footer-widget">
+                                    <h3 class="widget-title">My Account</h3>
+                                    <div class="menu-widget">
+                                        <ul>
+                                            <li><a href="{% url 'login' %}">Login </a></li>
+                                            <li><a href="{% url 'register' %}">register </a></li>
+                                            <li><a href="#">Wishlist </a></li>
+                                            <li><a href="{% url 'cart' %}">My Cart</a></li>
+                                            <li><a href="{% url 'checkout' %}">Checkout </a></li>
+                                
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Footer Widget End -->
+
+                            <!-- Footer Widget Start -->
+                            <div class="col-lg-4 col-md-8 col-sm-8">
+                                <div class="footer-widget">
+                                    <h3 class="widget-title">Subscribe</h3>
+                                    <div class="f-logo">
+                                        <p>If you want to Get all the latest information on Events, Sales and Offers.
+                                            Sign up for newsletter today. Be the first to know</p>
+                                        <div class="subscribe mt--20">
+                                            <form action="#">
+                                                <input placeholder="Enter Your Mail" type="email">
+                                                <button value="Submit" type="submit" class="search-button">Go</button>
+                                            </form>
+                                        </div>
+                                        <ul class="list-unstyled CTAs">
+                                            <li class="social-item"><a href="#" class="kainat-social-link"><i
+                                                        class="fa fa-facebook"></i></a></li>
+                                            <li class="social-item"><a href="#" class="kainat-social-link"><i
+                                                        class="fa fa-twitter"></i></a></li>
+                                            <li class="social-item"><a href="#" class="kainat-social-link"><i
+                                                        class="fa fa-youtube"></i></a></li>
+                                            <li class="social-item"><a href="#" class="kainat-social-link"><i
+                                                        class="fa fa-google-plus"></i></a></li>
+                                            <li class="social-item"><a href="#" class="kainat-social-link"><i
+                                                        class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Footer Widget End -->
+
+                            <!-- Footer Widget Start -->
+                            <div class="col-lg-2 col-md-4 col-sm-4">
+                                <div class="footer-widget">
+                                    <h3 class="widget-title">Quick Links</h3>
+                                    <div class="menu-widget">
+                                        <ul>
+                                            <li><a href="{% url 'about' %}">About Us </a></li>
+                                            <li><a href="{% url 'contact' %}">Contact Us </a></li>
+                                            <li><a href="#">Return Policy </a></li>
+                                            <li><a href="#">Delivery</a></li>
+                                            <li><a href="{% url 'blog' %}">Our Blog </a></li>
+                                            <li><a href="#">Our Team </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Footer Widget End -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer top area End -->
+
+            <!-- footer start -->
+            <footer class="grey-color">
+                <div class="container">
+                    <div class="footer-bottom">
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <!-- Copyright Text Start -->
+                                <p class="copyright-text">
+                                    © <a href="#">akspackaging</a>. All rights reserved
+                                </p>
+                                <!-- Copyright Text End -->
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="payment">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer end -->
+        </div>
+    </div>
+
+    <!-- Main Wrapper End -->
+
+    <!-- Scroll To Top -->
+
+    <a class="scroll-to-top" href="#"><i class="fa fa-angle-double-up"></i></a>
+
+
+
+
+    <!-- ************************* JS ************************* -->
+
+    <!-- jQuery JS -->
+    <script src="{% static 'assets/js/vendor/jquery.min.js' %}"></script>
+
+    <!-- Popper JS -->
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins JS -->
+    <script src="{% static 'assets/js/plugins.js' %}"></script>
+
+    <!-- Main JS -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+<!-- Mirrored from nahartheme.com/tf/kainat-preview/kainat/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Feb 2022 09:42:57 GMT -->
+
+</html>

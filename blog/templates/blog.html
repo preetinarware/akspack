@@ -1,0 +1,63 @@
+
+
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+            <!-- Breadcumb area Start -->
+            <div class="breadcumb-area bg--black ptb--100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="breadcumb">
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link" href="{% url 'home' %}">Home</a></li>
+                                <li class="kainat-breadcumb"><a class="kainat-breadcumb-link current" href="{% url 'blog' %}">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcumb area End -->
+
+            <!-- Main content wrapper start -->
+            <div class="main-content-wrapper">
+                <div class="page-inner section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    {% for b in blg %}
+                                    <div class="col-lg-3 col-md-6 mb--40">
+                                        <!-- Single Blog Start -->
+                                        <div class="single-blog">
+                                            <a href="{% url 'blog-detail' %}" class="kainat-blog-thumb">
+                                                <img src="/media/{{b.blog_img}}" alt="Blog Thumb">
+                                            </a>
+                                            <div class="blog-info text-left">
+                                                <h2>{{b.blog_name|capfirst}}</h2>
+                                                <h4>By <span>{{b.posted_by.username|capfirst}}</span> / {{b.created_date|date:'d F Y'}}</h4>
+                                                <p>{{b.blog_description|capfirst|safe|slice:':200'}}...</p>
+                                                <a href="{% url 'blog-detail' %}">Read More</a>
+                                            </div>
+                                        </div>
+                                        <!-- Single Blog End -->
+                                    </div>{% endfor %}
+                                   
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <ul class="pagination">
+                                            <li><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+            <!-- Main content wrapper end -->
+
+          {% endblock body %}

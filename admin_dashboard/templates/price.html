@@ -1,0 +1,291 @@
+
+{% include 'dbasic.html' %}
+
+{% block body %}
+{% load static %}
+<style>
+    .panel-heading{
+        text-align:center;
+    
+    
+    }
+    
+    .nav > li > a, .nav > li > a:focus {
+    text-decoration: none;
+    /* background-color: #eee; */
+}
+
+th{
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+    </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+
+<script>    $(document).ready(function() {
+    $('#multiple-checkboxes').multiselect({
+      includeSelectAllOption: true,
+    });
+});</script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+<div id="page-wrapper">
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-header text-center">
+                   Product Details
+                </h1>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-md-12 col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <b>Product Price</b>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="nav nav-pills">
+                            <li class="active "><a href="#uses" data-toggle="tab">All Price Details</a>
+                            </li>
+                            <li class=""><a href="#adduses" data-toggle="tab">Add New</a>
+                            </li>
+                           
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="uses">
+                               {% if price %}
+                                    <div class="panel-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Product</th>
+                                                        <th>Base Price</th>
+                                                         <th>Discount</th>
+                                                        <th>Transport</th>
+                                                         <th>GST</th>
+                                                         <th>Price</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead> 
+                                              
+                                                
+                                                <tbody>
+                                                    {% for u in price %}
+                                                    <tr>
+                                                        <td>{{forloop.counter}}</td>
+                                                      
+                                                        <td>    {{u.product.name}}  </td><td>    {{u.price_base}}  </td>
+                                                    <td>    {{u.discount}}  </td>
+                                                       
+                                                        <td>    {{u.transports}}  </td><td>    {{u.gst}}  </td><td>    {{u.price}}  </td>
+                                                        <td><button style="background-color: rgb(221, 47, 47);" 
+                                                            class="btn btn-primary " onclick="$('#usesid').val('{{u.product.id}}');" data-toggle="modal" data-target="#delete">
+                                                             <i class="fa fa-trash-o "></i>
+                                                            </button></td>
+                                                    </tr>            
+                                                    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                    <h4 class="modal-title text-center" id="myModalLabel">Delete</h4>
+                                                                </div>
+                                                                <form action="" method="post">{% csrf_token %}
+                                                                <div class="modal-body text-center" style="font-size:20px;">
+                                                              
+                                                                  <input  name="usesid" type="hidden" id="usesid">
+                                                                Are You Sure You want to delete?  </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="close" class="btn btn-primary" data-dismiss="modal">No</button>
+                                                                    <button type="submit" class="btn btn-danger">Yes</button>
+                                                                </div></form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   {% endfor %}
+                                                  
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    {% else %}<p>0 Available !</p>{% endif %}
+                                </div> 
+                            <div class="tab-pane fade" id="adduses" >
+                               <p>
+                                <form action="" method="post" >{% csrf_token %}
+                                    <div class="row">
+                                   <div class="col-lg-12">
+                                       <div class="panel panel-default">
+                                           <div class="panel-heading">
+                                              Information
+                                           </div>
+                                         
+                                           <div class="panel-body">
+                                               <div class="row">
+                                                  <div class="col-lg-6">
+                                                           <div class="form-group">
+                                                               <label>Product Name</label>
+                                                               <select name="name" required  class="form-control">
+                                                                {% for i in prod %}
+                                                            <option value="{{i.id}}">{{i.name}}</option>
+                                                  
+                                                  {% endfor %}
+                                                 </select> </div>  <div class="form-group">
+                                                    <label>Product Color</label><br>
+                                                        <select name="color" required id="color" multiple="multiple" class="form-control">
+                                                          
+                                                 {% for i in color %}
+                                                        <option value="{{i.id}}">{{i.color}}</option>
+                                              
+                                              {% endfor %}
+                                             </select>
+                                             </div>  <div class="form-group">
+                                                <label>Product Size</label><br>
+                                                    <select name="size" id="size" required multiple="multiple" class="form-control">
+                                                       {% for i in size %}
+                                                    <option value="{{i.id}}" >
+                                                    Measu.({{i.meassuement}}),&nbsp;min.({{i.min}}),&nbsp;max.({{i.max}}),&nbsplength.({{i.lenght}}),&nbsp;width.({{i.width}}),&nbsp;height.({{i.height}})   </option>
+                                          
+                                          {% endfor %}
+                                         </select>
+                                         </div>
+                                                         
+                                         <div class="form-group">
+                                            <label>Product Transport</label>
+                                            <input class="form-control" name="trans" required type="number" >
+                                        </div> <div class="form-group">
+                                            <label>Product Discount</label>
+                                            <input class="form-control" name="dis" required type="number" >
+                                        </div>
+                                                        
+                                                   </div>
+                                                   <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Product Thickness</label><br>
+                                                            <select name="thick" id="thick" required multiple="multiple" class="form-control">
+                                                                {% for i in thick %}
+                                                            <option value="{{i.id}}">{{i.thickness}}</option>
+                                                  
+                                                  {% endfor %}
+                                                 </select>
+                                                 </div>
+                                                 <div class="form-group">
+                                                    <label>Product Category</label><br>
+                                                        <select name="cat" required  class="form-control">
+                                                              <!-- <option value="0">Select</option>  -->
+                                                               {% for i in cat %}
+                                                        <option value="{{i.id}}">{{i.category}}</option>
+                                              
+                                              {% endfor %}
+                                             </select>
+                                             </div>
+                                             <div class="form-group">
+                                                <label>Product Base Price</label>
+                                                <input class="form-control" required name="base" type="number" >
+                                            </div>
+                                             
+                                            <div class="form-group">
+                                                <label>Product GST</label>
+                                                <input class="form-control" required name="gst" type="number" >
+                                            </div> 
+                                              
+                                     
+                                                 
+                                            </div>
+                                               
+                                                       
+                                                      
+                                                   </div>
+                                                
+                   
+                                                   <button class="btn btn-primary " type="submit" style="float: right;">
+                                            Save Product</button>
+                               </div>
+                           </form></p>
+                             </div>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+     
+
+<script>
+
+    $(function() {
+    
+    $('#color').multiselect({
+      includeSelectAllOption: true
+    });
+    
+    $('#btnget').click(function() {
+      data=($('#color').val());
+    });
+    });
+
+
+    $(function() {
+    
+    $('#thick').multiselect({
+      includeSelectAllOption: true
+    });
+    
+    $('#btnget').click(function() {
+      data=($('#thick').val());
+    });
+    }); $(function() {
+    
+    $('#size').multiselect({
+      includeSelectAllOption: true
+    });
+    
+    $('#btnget').click(function() {
+      data=($('#size').val());
+    });
+    });
+
+$(function() {
+    
+    $('#use').multiselect({
+      includeSelectAllOption: true
+    });
+    
+    $('#btnget').click(function() {
+      data=($('#use').val());
+    });
+    }); 
+// $(function() {
+    
+//     $('#cat').multiselect({
+//       includeSelectAllOption: true
+//     });
+    
+//     $('#btnget').click(function() {
+//       data=($('#cat').val());
+//     });
+//     });
+ $(function() {
+    
+    $('#mate').multiselect({
+      includeSelectAllOption: true
+    });
+    
+    $('#btnget').click(function() {
+      data=($('#mate').val());
+    });
+    });
+                </script>
+        {% endblock body %}
